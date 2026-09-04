@@ -1,18 +1,5 @@
-from abc import ABC, abstractmethod
+from ex0 import Creature
 from ex1.capabilities import HealCapability, TransformCapability
-
-
-class Creature(ABC):
-    def __init__(self, name: str, creature_type: str) -> None:
-        self.name = name
-        self.creature_type = creature_type
-
-    @abstractmethod
-    def attack(self) -> str:
-        ...
-
-    def describe(self) -> str:
-        return f"{self.name} is a {self.creature_type} type Creature"
 
 
 class Sproutling(Creature, HealCapability):
@@ -40,6 +27,7 @@ class Bloomelle(Creature, HealCapability):
 class Shiftling(Creature, TransformCapability):
     def __init__(self) -> None:
         super().__init__("Shiftling", "Normal")
+        TransformCapability.__init__(self)
 
     def attack(self) -> str:
         if self.is_transformed:
@@ -58,6 +46,7 @@ class Shiftling(Creature, TransformCapability):
 class Morphagon(Creature, TransformCapability):
     def __init__(self) -> None:
         super().__init__("Morphagon", "Normal/Dragon")
+        TransformCapability.__init__(self)
 
     def attack(self) -> str:
         if self.is_transformed:

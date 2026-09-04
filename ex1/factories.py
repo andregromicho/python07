@@ -1,15 +1,5 @@
-from abc import ABC, abstractmethod
 from .creatures import Creature, Sproutling, Bloomelle, Shiftling, Morphagon
-
-
-class CreatureFactory(ABC):
-    @abstractmethod
-    def create_base(self) -> Creature:
-        ...
-
-    @abstractmethod
-    def create_evolved(self) -> Creature:
-        ...
+from ex0 import CreatureFactory
 
 
 class HealingCreatureFactory(CreatureFactory):
