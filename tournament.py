@@ -45,7 +45,7 @@ def main() -> None:
     transform_factory = TransformCreatureFactory()
 
     normal_strategy = NormalStrategy()
-    aggresive_strategy = AggressiveStrategy()
+    aggressive_strategy = AggressiveStrategy()
     defensive_strategy = DefensiveStrategy()
 
     print("Tournament 0 (basic)")
@@ -57,7 +57,7 @@ def main() -> None:
 
     print("Tournament 1 (error)")
     opponents_t1 = [
-        (flame_factory, aggresive_strategy),
+        (flame_factory, aggressive_strategy),
         (healing_factory, defensive_strategy),
     ]
     battle(opponents_t1)
@@ -66,7 +66,7 @@ def main() -> None:
     opponents_t2 = [
         (aqua_factory, normal_strategy),
         (healing_factory, defensive_strategy),
-        (transform_factory, aggresive_strategy),
+        (transform_factory, aggressive_strategy),
     ]
     battle(opponents_t2)
 
