@@ -26,12 +26,12 @@ class Bloomelle(Creature, HealCapability):
 
 class Shiftling(Creature, TransformCapability):
     def __init__(self) -> None:
-        super().__init__("Shiftling", "Normal")
+        Creature.__init__("Shiftling", "Normal")
         TransformCapability.__init__(self)
 
     def attack(self) -> str:
         if self.is_transformed:
-            return f"{self.name} performs a boosted attack!"
+            return f"{self.name} performs a boosted strike!"
         return f"{self.name} attacks normally."
 
     def transform(self) -> str:
