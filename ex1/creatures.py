@@ -26,7 +26,7 @@ class Bloomelle(Creature, HealCapability):
 
 class Shiftling(Creature, TransformCapability):
     def __init__(self) -> None:
-        Creature.__init__("Shiftling", "Normal")
+        Creature.__init__(self, "Shiftling", "Normal")
         TransformCapability.__init__(self)
 
     def attack(self) -> str:
@@ -45,7 +45,7 @@ class Shiftling(Creature, TransformCapability):
 
 class Morphagon(Creature, TransformCapability):
     def __init__(self) -> None:
-        super().__init__("Morphagon", "Normal/Dragon")
+        Creature.__init__(self, "Morphagon", "Normal/Dragon")
         TransformCapability.__init__(self)
 
     def attack(self) -> str:

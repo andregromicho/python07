@@ -1,7 +1,6 @@
 from .capabilities import HealCapability, TransformCapability
 from .creatures import Bloomelle, Morphagon, Shiftling, Sproutling
 from .factories import (
-    CreatureFactory,
     HealingCreatureFactory,
     TransformCreatureFactory,
 )

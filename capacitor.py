@@ -1,7 +1,7 @@
 from ex1 import HealingCreatureFactory, TransformCreatureFactory
 
 
-def main():
+def main() -> None:
 
     healing_factory = HealingCreatureFactory()
 
