@@ -21,6 +21,7 @@ def main() -> None:
 
     transform_factory = TransformCreatureFactory()
 
+    print()
     print("Testing Creature with transform capability")
     base_transform = transform_factory.create_base()
     evolved_transform = transform_factory.create_evolved()
